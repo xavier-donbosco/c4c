@@ -1,6 +1,7 @@
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
 from delta.tables import *
+from pyspark.sql.functions import lit
 
 def customfields_df(df):
     df = df.withColumn("CustomFields", explode_outer(col("CustomFields"))).select("QuoteId" ,"CustomFields.*")
@@ -22,5 +23,6 @@ def model(dbt, session):
         lis1.append(i.replace(" ", "_" ))
     for i in range(len(lis)):
         df = df.withColumnRenamed(lis[i], lis1[i])
-
+    load_date = dbt.config.get("load_date")
+    df = df.withColumn("load_date", lit(load_date))
     return df

@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  - name: cpq_custom_fields
+    config:
+      load_date: '{{ var("load_date") }}'

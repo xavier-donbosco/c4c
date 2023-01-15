@@ -2,6 +2,7 @@ from pyspark.sql.functions import *
 from pyspark.sql.types import *
 from delta.tables import *
 from functools import reduce
+from pyspark.sql.functions import lit, col
 
 def model(dbt, session):
 
