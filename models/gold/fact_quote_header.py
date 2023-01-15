@@ -51,6 +51,9 @@ def model(dbt, session):
 
     cpq_involved_parties_df= reduce(lambda left, right: left.join(right, on=["QuoteId"]), list_of_involved_dfs)
 
+    new_list= ['QuoteId', 'Bill_to_party_CITY_NM', 'Contact_person_CITY_NM', 'Distributor_Contact_CITY_NM', 'Distributor_CITY_NM', 'District_Manager_CITY_NM', 'Payer_CITY_NM', 'Project_Location_CITY_NM', 'Regional_Manager_CITY_NM', 'Sales_representative_CITY_NM', 'Ship_to_party_CITY_NM', 'Sold_to_party_CITY_NM']
+    cpq_involved_parties_df = cpq_involved_parties_df.toDF(* new_list)
+
     cpq_custom_fields_df = session.table("default_cpq.cpq_custom_fields")
     cpq_header_df = session.table("default_cpq.cpq_header")
     cpq_quote_amount_df = session.table("default_cpq.cpq_quote_amount")
