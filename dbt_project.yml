@@ -9,24 +9,10 @@ config-version: 2
 # This setting configures which "profile" dbt uses for this project.
 profile: 'c4c'
 
-vars:
-  # The `start_date` variable will be accessible in all resources
-  load_date: '2016-06-01'
-  load_date1: '2016-06-01'
-  # load_date2: '2016-06-01'
-  # load_date3: '2016-06-01'
-  # load_date4: '2016-06-01'
-
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
 # found in the "models/" directory. You probably won't need to change these!
 model-paths: ["models"]
-analysis-paths: ["analyses"]
-test-paths: ["tests"]
-seed-paths: ["seeds"]
-macro-paths: ["macros"]
-snapshot-paths: ["snapshots"]
-
 target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
@@ -43,4 +29,4 @@ models:
   c4c:
     # Config indicated by + and applies to all files under models/example/
     example:
-      +materialized: view
+      +materialized: table

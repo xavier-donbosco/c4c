@@ -1,0 +1,86 @@
+version: 2
+
+sources:
+  - name: bronze
+    schema: "bronze"
+    tables:
+      - name: cpq_quote_header
+        description: "cpq quote header json file"
+        external:
+          location: 'dbfs:/mnt/cntdlt/bronze/cpq/quote_header/'
+          using: json
+          # partitions:
+          #   - name: ing_date
+          #     data_type: string
+          # options:
+            # sep: ','
+            # header: 'true'
+            # timestampFormat: 'yyyy-MM-dd HH:mm'
+
+        columns:
+          - name: AverageGrossMarginPercent
+            data_type: string
+          - name: AverageProductDiscountPercent
+            data_type: string
+          - name: Comments
+            data_type: string
+          - name: Cost
+            data_type: string
+          - name: CurrencyCode
+            data_type: string
+          - name: CustomFields
+            data_type: string
+          - name: DateCreated
+            data_type: string
+          - name: DateModified
+            data_type: string
+          - name: DistributionChannel
+            data_type: string
+          - name: Division
+            data_type: string
+          - name: EffectiveDate
+            data_type: string
+          - name: ErrorMessage
+            data_type: string
+          - name: ExternalId
+            data_type: string
+          - name: ExternalSystemId
+            data_type: string
+          - name: InvolvedParties
+            data_type: string
+          - name: IsPrimary
+            data_type: string
+          - name: MarketCode
+            data_type: string
+          - name: MarketId
+            data_type: long
+          - name: OpportunityId
+            data_type: string
+          - name: OpportunityName
+            data_type: string
+          - name: Origin
+            data_type: string
+          - name: OwnerId
+            data_type: long
+          - name: PriceBookId
+            data_type: long
+          - name: QuoteId
+            data_type: string
+          - name: QuoteNumber
+            data_type: string
+          - name: QuoteTables
+            data_type: string
+          - name: RevisionNumber
+            data_type: string
+          - name: StatusId
+            data_type: long
+          - name: StatusName
+            data_type: string
+          - name: QuoteId
+            data_type: string
+          - name: TotalListPrice
+            data_type: string
+          - name: TotalNetPrice
+            data_type: string
+          - name: TotalProductDiscountAmount
+            data_type: string
