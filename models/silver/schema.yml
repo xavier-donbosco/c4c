@@ -1,0 +1,135 @@
+version: 2
+
+models:
+  - name: cpq_header
+    description: "cpq header model gives the details about cpq header"
+    columns:
+      - name: DateModified
+        tests:
+          - not_null
+      - name: DistributionChannel
+        tests:
+          - not_null
+      - name: Division
+        tests:
+          - not_null
+      - name: EffectiveDate
+        tests:
+          - not_null
+      - name: ErrorMessage
+        tests:
+          - not_null
+      - name: ExternalId
+        tests:
+          - not_null
+      - name: ExternalSystemId
+        tests:
+          - not_null
+      - name: IsPrimary
+        tests:
+          - not_null
+      - name: MarketCode
+        tests:
+          - not_null
+      - name: MarketId
+        tests:
+          - not_null
+      - name: OpportunityId
+        tests:
+          - not_null
+      - name: OpportunityName
+        tests:
+          - not_null
+      - name: Origin
+        tests:
+          - not_null
+      - name: OwnerId
+        tests:
+          - not_null
+      - name: PriceBookId
+        tests:
+          - not_null
+      - name: QuoteId
+        tests:
+          - not_null
+      - name: QuoteNumber
+        tests:
+          - not_null
+      - name: RevisionNumber
+        tests:
+          - not_null
+      - name: StatusId
+        tests:
+          - not_null
+      - name: StatusName
+        tests:
+          - not_null
+  - name: cpq_quote_line_item
+    description: "cpq quote line item model gives the details about cpq quote line item model"
+    columns:
+      - name: CurrencyCode
+        tests:
+          - not_null
+      - name: DateCreated
+        tests:
+          - not_null
+      - name: DateModified
+        tests:
+          - not_null
+      - name: DistributionChannel
+        tests:
+          - not_null
+      - name: Division
+        tests:
+          - not_null
+      - name: EffectiveDate
+        tests:
+          - not_null
+      - name: ErrorMessage
+        tests:
+          - not_null
+      - name: ExternalId
+        tests:
+          - not_null
+      - name: ExternalSystemId
+        tests:
+          - not_null
+      - name: IsPrimary
+        tests:
+          - not_null
+      - name: MarketCode
+        tests:
+          - not_null
+      - name: MarketId
+        tests:
+          - not_null
+      - name: OpportunityId
+        tests:
+          - not_null
+      - name: OpportunityName
+        tests:
+          - not_null
+      - name: Origin
+        tests:
+          - not_null
+      - name: OwnerId
+        tests:
+          - not_null
+      - name: PriceBookId
+        tests:
+          - not_null
+      - name: QuoteId
+        tests:
+          - not_null
+      - name: QuoteNumber
+        tests:
+          - not_null
+      - name: RevisionNumber
+        tests:
+          - not_null
+      - name: StatusId
+        tests:
+          - not_null
+      - name: StatusName
+        tests:
+          - not_null
